@@ -18,6 +18,7 @@ class WordGuesserGame
   
   def guess(letter)
     def is_letter?(lookAhead)
+      # Helper function to check if the input is a letter
       return lookAhead.match?(/[[:lower:]]/)
     end
     
