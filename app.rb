@@ -48,6 +48,12 @@ class WordGuesserApp < Sinatra::Base
     else
       @game.guess(letter)
     end
+    
+    if @game.check_win_or_lose() == :win
+      redirect '/win'
+    elsif @game.check_win_or_lose() == :lose
+      redirect '/lose'
+    end
     redirect '/show'
   end
   
