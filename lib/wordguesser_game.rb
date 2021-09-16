@@ -52,7 +52,8 @@ class WordGuesserGame
   def check_win_or_lose()
     if @wrong_guesses.length >= 7
       return :lose
-    elsif @guesses.length == @word.length
+#     elsif @guesses.length == @word.length
+    elsif !@word_with_guesses.include?("-")
       return :win
     else
       return :play
